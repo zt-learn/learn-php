@@ -5,6 +5,14 @@ $array = array(
     'c' => array('a' => '7', 'b' => '8', 'c' => '9')
 );
 
+$test = array();
+foreach ($array as $key => $value) {
+//    echo $key;
+//    var_dump($value);
+    $test[$key]=$value;
+}
+var_dump($test);
+
 $array2 = $array;
 echo '*********<hr>******';
 print_r($array2);
