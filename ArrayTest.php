@@ -4,12 +4,13 @@ $array = array(
     'b' => array('a' => '4', 'b' => '5', 'c' => '6'),
     'c' => array('a' => '7', 'b' => '8', 'c' => '9')
 );
+echo sizeof($array);
 
 $test = array();
 foreach ($array as $key => $value) {
 //    echo $key;
 //    var_dump($value);
-    $test[$key]=$value;
+    $test[$key] = $value;
 }
 var_dump($test);
 
