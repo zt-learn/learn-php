@@ -36,6 +36,7 @@ class SingletonPDO
         return self::$_instance;
     }
 
+    /*执行查询语句，返回数组，*/
     public function query($sql)
     {
         $rows = $this->pdo->query($sql);
@@ -52,20 +53,21 @@ class SingletonPDO
         return $result;
     }
 
-    public function update($sql)
+    /*执行update，delete，insert语句，如果成功返回true*/
+    public function execute($sql)
     {
-        $this->pdo->query($sql);
+        if ($this->pdo->query($sql)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
-$test = SingletonPDO::getInstance();
-//var_dump($test->query("select * from user where name='test'"));
-var_dump($test->query("select * from user"));
-
-$test2 = SingletonPDO::getInstance();
-
-if ($test == $test2) {
+$db = SingletonPDO::getInstance();
+if ($db->execute("insert into stage (user_id,stage_id) VALUES ('2','1')")) {
     echo 'ok';
 } else {
     echo 'hehe';
 }
+?>
