@@ -20,7 +20,7 @@ class SingletonPDO
         $this->pass = '123456';          //对应的密码
         $this->dsn = "$this->dbms:host=$this->host;dbname=$this->dbName";
         $this->pdo = new PDO($this->dsn, $this->user, $this->pass, array(PDO::ATTR_PERSISTENT => true));
-        $this->pdo->query('set names uft-8');
+        $this->pdo->query('set names uft8');
     }
 
     private function __clone()

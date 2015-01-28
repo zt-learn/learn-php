@@ -1,2 +1,3 @@
 <?php
-echo $_POST['post_data'];
+var_dump($_POST['name']);
+
