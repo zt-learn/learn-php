@@ -5,6 +5,11 @@ $array = array(
     'c' => array('a' => '7', 'b' => '8', 'c' => '9')
 );
 
+$hehe = $array;
+$hehe['pop'] = 'sdfsadfadf';
+var_dump($hehe);
+
+echo '<hr>';
 $testArray1 = array();
 foreach ($array as $k => $v) {
     $testArray1[$k] = $v;
