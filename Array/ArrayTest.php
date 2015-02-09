@@ -1,13 +1,20 @@
 <?php
 $array = array(
-    'a' => array('a' => '1212', 'b' => '2', 'c' => '3'),
+    'a' => array('a' => '1', 'b' => '2', 'c' => '3'),
     'b' => array('a' => '4', 'b' => '5', 'c' => '6'),
     'c' => array('a' => '7', 'b' => '8', 'c' => '9')
 );
 
-$hehe = $array;
-$hehe['pop'] = 'sdfsadfadf';
+$hehe = [];
+$hehe[] = $array;
+$array = array(
+    'a' => array('a' => '1212', 'b' => '2222', 'c' => '3333'),
+    'b' => array('a' => '4444', 'b' => '5555', 'c' => '6666'),
+    'c' => array('a' => '7777', 'b' => '8888', 'c' => '9999')
+);
+$hehe[] = $array;
 var_dump($hehe);
+var_dump($array);
 
 echo '<hr>';
 $testArray1 = array();
