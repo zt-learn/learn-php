@@ -1,9 +1,9 @@
 {
-  "name": "leozt/onlyphp",
-  "description": "just do something small.we can use the singletonpdo for db",
+  "name": "lizhentao/primaryphp",
+  "description": "use it for lzt",
   "authors": [
     {
-      "name": "Li Zhentao",
+      "name": "zhentaoo",
       "email": "1904974327@qq.com"
     }
   ],
@@ -11,7 +11,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "test\\": "NameSpaceTest/"
+      "test\\a1\\": "NameSpaceTest"
     }
   }
 }
