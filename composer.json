@@ -1,13 +1,12 @@
 {
-  "name": "lizhentao/primaryphp",
-  "description": "use it for lzt",
+  "name": "zhentaoo/primaryphp",
+  "description": "hehe",
   "authors": [
     {
       "name": "zhentaoo",
       "email": "1904974327@qq.com"
     }
   ],
-  "minimum-stability": "beta",
   "require": {},
   "autoload": {
     "psr-4": {
