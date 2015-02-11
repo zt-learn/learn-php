@@ -11,7 +11,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "test\\a1\\": "NameSpaceTest"
+      "test\\a1\\": "NameSpaceTest/"
     }
   }
 }
