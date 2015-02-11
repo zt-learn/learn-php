@@ -1,12 +1,13 @@
 {
-  "name": "zhentaoo/primaryphp",
-  "description": "hehe",
+  "name": "leo/primaryphp",
+  "description": "study composer",
   "authors": [
     {
       "name": "zhentaoo",
       "email": "1904974327@qq.com"
     }
   ],
+  "minimum-stability": "dev",
   "require": {},
   "autoload": {
     "psr-4": {
