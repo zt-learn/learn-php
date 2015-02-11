@@ -1,12 +1,17 @@
 {
-    "name": "leozt/onlyphp",
-    "description": "just do something small.we can use the singletonpdo for db",
-    "authors": [
-        {
-            "name": "Li Zhentao",
-            "email": "1904974327@qq.com"
-        }
-    ],
-    "minimum-stability": "beta",
-    "require": {}
+  "name": "leozt/onlyphp",
+  "description": "just do something small.we can use the singletonpdo for db",
+  "authors": [
+    {
+      "name": "Li Zhentao",
+      "email": "1904974327@qq.com"
+    }
+  ],
+  "minimum-stability": "beta",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "test\\": "NameSpaceTest/"
+    }
+  }
 }
