@@ -1,5 +1,5 @@
 {
-  "name": "leo/primaryphp",
+  "name": "leo_zt/primaryphp",
   "description": "study composer",
   "authors": [
     {
@@ -8,7 +8,7 @@
     }
   ],
   "minimum-stability": "dev",
-  "require": {},
+  "require": {"php": ">=5.3.0"},
   "autoload": {
     "psr-4": {
       "test\\a1\\": "NameSpaceTest/"
