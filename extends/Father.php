@@ -1,17 +1,20 @@
 <?php
+require_once 'son.php';
 
 class Father
 {
-    public $f;
+    public $father;
+    public $obj;
 
     public function __construct()
     {
-        $this->f = 'ni ba ';
+        $this->father = 'ni ba ';
+        $this->obj=new Son();
     }
 
     public function test()
     {
         echo 'i am father';
-        echo $this->f;
+        echo $this->father;
     }
 }

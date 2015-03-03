@@ -1,6 +1,8 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 
+echo date('Y-m-d').'<hr>';
+
 /*时间戳*/
 $TimeStamp = 1421734123;
 /*睡眠2秒*/
