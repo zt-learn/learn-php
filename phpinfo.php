@@ -1,3 +1,2 @@
 <?php
-echo 'adsfa';
 phpinfo();

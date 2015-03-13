@@ -7,10 +7,13 @@ $redis->connect("127.0.0.1", "6379"); //连接redis服务器
 /*set 使用*/
 $redis->set("test", "set test");
 echo $redis->get('test') . '<br>';
-$redis->append('test', 'xxxx');
-echo $redis->get('test') . '<br>';
+
 $redis->set('test', 'new set');
 echo $redis->get('test') . '<br>';
+
+$redis->append('test', 'xxxx');
+echo $redis->get('test') . '<br>';
+
 
 $array = array('1' => '1',
     '2' => '2',

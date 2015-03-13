@@ -7,6 +7,10 @@
  */
 
 //获取域名或主机地址
+if ($_SERVER['HTTP_HOST'] == '127.0.0.1') {
+    echo 'hehe';
+}
+
 echo $_SERVER['HTTP_HOST'] . "<br>"; #localhost
 
 //获取网页地址

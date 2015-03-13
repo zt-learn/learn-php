@@ -12,3 +12,6 @@ echo ucfirst('asdf') . '<hr>';
 
 //确定是不是数字，或数字字符串
 echo is_numeric('123123') . '<hr>';
+
+/*strpos — 查找字符串首次出现的位置*/
+echo strpos("sdfsdf", 'f');

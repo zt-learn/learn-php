@@ -1,9 +1,14 @@
 <?php
+$testArray5 = [['sdf' => 0, 'sdfs' => 2], [], []];
+var_dump($testArray5);
+
 $array = array(
     'a' => array('a' => '1', 'b' => '2', 'c' => '3'),
     'b' => array('a' => '4', 'b' => '5', 'c' => '6'),
     'c' => array('a' => '7', 'b' => '8', 'c' => '9')
 );
+
+echo sizeof($array);
 
 $hehe = [];
 $hehe[] = $array;
