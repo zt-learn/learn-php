@@ -1,0 +1,28 @@
+{
+  "stage": {
+    "star": "0",
+    "bestscore": "0",
+    "hero": "0",
+    "hero_bestscore": "0",
+    "playcount": "1",
+    "hero_playcount": "0"
+  },
+  "friends": [],
+  "startupitem": {
+    "IU1": "1",
+    "IU2": "0",
+    "IU3": "0",
+    "IU4": "0",
+    "IU5": "0",
+    "IU6": "1",
+    "IU7": "0",
+    "I1": "0",
+    "I2": "0",
+    "I3": "0",
+    "I4": "0",
+    "I5": "0",
+    "I6": "2",
+    "I7": "0"
+  },
+  "packet_status": 0
+}

@@ -1,0 +1,82 @@
+[
+  [
+    1,
+    0,
+    "Bronze Star"
+  ],
+  [
+    2,
+    6,
+    "Silver Star"
+  ],
+  [
+    3,
+    30,
+    "Gold Star"
+  ],
+  [
+    4,
+    70,
+    "Bronze Medal"
+  ],
+  [
+    5,
+    120,
+    "Silver Medal"
+  ],
+  [
+    6,
+    190,
+    "Gold Medal"
+  ],
+  [
+    7,
+    280,
+    "Bronze Crown"
+  ],
+  [
+    8,
+    400,
+    "Silver Crown"
+  ],
+  [
+    9,
+    600,
+    "Gold Crown"
+  ],
+  [
+    10,
+    900,
+    "Bronze Trophy"
+  ],
+  [
+    11,
+    1200,
+    "Silver Trophy"
+  ],
+  [
+    12,
+    2000,
+    "Gold Trophy"
+  ],
+  [
+    13,
+    2800,
+    "Bronze Laurel"
+  ],
+  [
+    14,
+    4000,
+    "Silver Laurel"
+  ],
+  [
+    15,
+    5500,
+    "Gold Laurel"
+  ],
+  [
+    16,
+    20000,
+    "King"
+  ]
+]

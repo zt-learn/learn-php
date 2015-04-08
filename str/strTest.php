@@ -14,4 +14,18 @@ echo ucfirst('asdf') . '<hr>';
 echo is_numeric('123123') . '<hr>';
 
 /*strpos — 查找字符串首次出现的位置*/
-echo strpos("sdfsdf", 'f');
+if (!strpos("sdfsdf", 'fss')) {
+    echo 'sdfsd.<hr>';
+};
+
+/**
+ *
+ */
+$data = [];
+$str = "2013-01-01,2013-02-02,2013-03-03,2013-04-04";
+$data = split(',', $str);
+var_dump($data);
+echo $data[2].'<hr>';
+/**
+ *
+ */

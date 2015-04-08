@@ -28,7 +28,13 @@ function dealImg($src_img, $dst_w, $dst_h)
     }
 
 // 剪裁
-    $source = imagecreatefromjpeg($src_img);
+    if (@imagecreatefromgif($src_img)) {
+        $source = imagecreatefromgif($src_img);
+    } elseif (@imagecreatefrompng($src_img)) {
+        $source = imagecreatefrompng($src_img);
+    } elseif (@imagecreatefromjpeg($src_img)) {
+        $source = imagecreatefromjpeg($src_img);
+    }
     $croped = imagecreatetruecolor($w, $h);
     imagecopy($croped, $source, 0, 0, $x, $y, $src_w, $src_h);
 

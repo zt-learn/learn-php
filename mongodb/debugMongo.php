@@ -15,22 +15,23 @@ $document = array(
       echo $document["title"] . "\n";
    }
    */
-   function mid($name, $db){
-$update = array('$inc'=>array("id"=>1));
-$query = array('name'=>$name);
-$command = array(
-'findandmodify'=>'ids', 'update'=>$update,
-'query'=>$query, 'new'=>true, 'upsert'=>true
-);
-$id = $db->command($command);
-print_r($id);
-return $id['value']['id'];
+function mid($name, $db)
+{
+    $update = array('$inc' => array("id" => 1));
+    $query = array('name' => $name);
+    $command = array(
+        'findandmodify' => 'ids', 'update' => $update,
+        'query' => $query, 'new' => true, 'upsert' => true
+    );
+    $id = $db->command($command);
+    print_r($id);
+    return $id['value']['id'];
 }
- 
+
 $conn = new Mongo();
 $db = $conn->test;
 $id = mid('user', $db);
-$db->user->save(array('uid'=>$id, 'username'=>'kekeles', 'password'=>'kekeles', 'info'=>'http://blog.dotcoo.com/'));
+$db->user->save(array('uid' => $id, 'username' => 'kekeles', 'password' => 'kekeles', 'info' => 'http://blog.dotcoo.com/'));
 $conn->close();
 
 ?>
