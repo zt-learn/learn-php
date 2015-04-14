@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Asia/Shanghai');
+
 echo strtolower("sdf_SD_sdf") . '<hr>';
 
 //字符串替换，但是不能替换成空
@@ -22,10 +24,16 @@ if (!strpos("sdfsdf", 'fss')) {
  *
  */
 $data = [];
-$str = "2013-01-01,2013-02-02,2013-03-03,2013-04-04";
+$str = "2013-01-01,2013-02-02,2013-03-03,2015-04-11";
 $data = split(',', $str);
-var_dump($data);
-echo $data[2].'<hr>';
+
+$d1 = strtotime($data[3]);
+$d2 = strtotime(date('Y-m-d'));
+$Days = round(($d2 - $d1) / 3600 / 24);
+echo 'days:' . $Days;
+
+
+//echo $data[2] . '<hr>';
 /**
  *
  */

@@ -30,7 +30,7 @@ var_dump(getdate());
 echo date('Y-m-d') - '2015-03-20' . '<hr>';
 /**/
 $date = date('Y-m-d');
-$pastDate = "2015-03-20";
+$pastDate = "2015-03-31";
 $d1 = strtotime($date);
 $d2 = strtotime($pastDate);
 $Days = round(($d1 - $d2) / 3600 / 24);
@@ -39,4 +39,5 @@ echo $Days . '<hr>';
 if (!strpos("2014-01-02,2014-01-03", "2014-01-04")) {
     echo 'hehe';
 }
+
 

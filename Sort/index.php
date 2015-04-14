@@ -28,5 +28,5 @@ foreach ($array as $key => $row) {
     $edition[$key] = $row['name'];
 }
 
-array_multisort($volume, SORT_DESC, $edition, SORT_ASC, $array);
+array_multisort($volume, SORT_DESC, $array);
 var_dump($array);
