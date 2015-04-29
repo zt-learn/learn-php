@@ -6,4 +6,14 @@
  * Time: 12:34
  */
 
-$str = "789_78789_0000";
+
+$item = 't';
+switch ($item) {
+    case 's':
+        echo 'ss';
+        break;
+
+    case 't':
+        echo 'tt';
+        break;
+}

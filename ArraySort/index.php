@@ -6,7 +6,10 @@
  * Time: 17:30
  */
 
+/*一维数组排序*/
 
+
+/*多维数组排序*/
 $array = [
     [
         'age' => '15',
@@ -22,10 +25,10 @@ $array = [
     ]
 ];
 $volume = null;
-$edition = null;
+//$edition = null;
 foreach ($array as $key => $row) {
     $volume[$key] = $row['age'];
-    $edition[$key] = $row['name'];
+//    $edition[$key] = $row['name'];
 }
 
 array_multisort($volume, SORT_DESC, $array);

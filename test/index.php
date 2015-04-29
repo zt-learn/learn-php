@@ -6,28 +6,17 @@
  * Date: 2015/3/20
  * Time: 14:03
  */
-class peo
+class test
 {
-    public function set()
+//    public static function hehe()
+//    {
+//        echo 'test';
+//    }
+
+    public function test1()
     {
-        echo 'adfa';
+        echo 'test111';
     }
 }
 
-class User
-{
-    public $peo;
-
-    public function __construct()
-    {
-        $this->peo = new peo();
-    }
-
-    public function say()
-    {
-        $this->peo->set();
-    }
-}
-
-$user = new User();
-$user->say();
+test::test1();

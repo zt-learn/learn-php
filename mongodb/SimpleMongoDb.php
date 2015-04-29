@@ -1,32 +1,13 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: leo
- * Date: 2015/4/14
- * Time: 16:48
- */
+define('GAMEHOST', '127.0.0.1');
+define('MONGOPORT', '27017');
+
 class SimpleMongoDB
 {
-    private static $_instance;
-    private $mongoClient;
-    private $mongoDb;
-    private $collection;
-
-    public function __construct($host, $port, $dataBase, $tableName)
-    {
-        $this->mongoClient = new MongoClient("$host:" . "$port");
-        $this->mongoDb = $this->mongoClient->selectDB($dataBase);
-        $this->collection = $this->mongoDb->selectCollection($tableName);
-    }
-
-    public function __destruct()
-    {
-        $this->mongoClient->close();
-    }
 
     /*id自增长*/
-    public function mid($name, $db)
+    public static function mid($name, $db)
     {
         $update = array('$inc' => array("id" => 1));
         $query = array('name' => $name);
@@ -43,31 +24,78 @@ class SimpleMongoDB
      * @param $query
      * 插入数据要保证自增长
      */
-    public function insert($query)
+    public static function insertWithID($query)
     {
-        $id = $this->mid('user', $this->mongoDb);
-        $query = $query;
-        $query['useridx'] = $id;
-        $this->collection->insert($query);
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('user');
+        $id = static::mid('user', $mongoDb);
+
+        $data = $query;
+        $data['useridx'] = $id + 10000000;
+
+        $collection->insert($data);
+        $mongoClient->close();
     }
 
     /**
-     * update分为覆盖方式和非覆盖方式：
-     * $where: ["useridx" => 204]
-     * $set: ['name' => 'leo']
+     * 插入一条记录
      */
-    public function update($where, $set)
+    public static function insert($data)
     {
-        $this->collection->update($where, ['$set' => $set]);
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('user');
+
+        $collection->insert($data);
+        $mongoClient->close();
     }
+
+    /**
+     * @param $where
+     * @param $set
+     *
+     * 如果该结点下有$set属性：数据覆盖
+     * 如果没有这个属性：添加这条属性
+     */
+    public static function updateWithSet($where, $set)
+    {
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('stage');
+
+        $collection->update($where, ['$set' => $set]);
+        $mongoClient->close();
+    }
+
+    /**
+     * @param $where
+     * @param $addToSet
+     */
+    public static function updateWithUnset($where, $unset)
+    {
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('user');
+
+        $collection->update($where, ['$unset' => $unset]);
+        $mongoClient->close();
+    }
+
 
     /**
      * 查询条件是一个数组
      *['name' => '田雨青']
      */
-    public function select($query = array())
+    public static function select($query = array())
     {
-        return $this->collection->findOne($query);
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('stage');
+
+        $data = $collection->findOne($query);
+        $mongoClient->close();
+        return $data;
     }
 
     /**
@@ -76,32 +104,119 @@ class SimpleMongoDB
      * 删除条件也是一个数组
      * ['name' => '田雨青']
      */
-    public function delete($query = array())
+    public static function delete($query = array())
     {
-        $this->collection->remove($query);
+        $mongoClient = new MongoClient(GAMEHOST . ":" . MONGOPORT);
+        $mongoDb = $mongoClient->selectDB("monster");
+        $collection = $mongoDb->selectCollection('user');
+
+        $collection->remove($query);
+        $mongoClient->close();
     }
 }
 
+var_dump(SimpleMongoDB::select(['useridx' => 1]));
 
-$mongoDb = new  SimpleMongoDB('10.10.10.123', '27017', 'leo', 'user');
+SimpleMongoDB::insertWithID(['xxx' => 'ooo']);
 
-$query = [
-    "name" => "田雨青",
-    "floor" => "96",
-    "level" => "8",
-    "episodeunlocklist" => [
-        [
-            "A" => "1",
-            "B" => "2",
-            "C" => "1",
-        ],
-        [
-            "A" => "2",
-            "B" => "2",
-            "C" => "1",
-        ]
-    ],
-];
-$mongoDb->insert($query);
-//var_dump($mongoDb->select($query));
-//var_dump($mongoDb->delete(['useridx' => 204]));
+
+switch (4) {
+    case 0:
+        SimpleMongoDB::updateWithUnset(
+            ['name' => 'leo'],
+            'wanna'
+        );
+        break;
+
+    case 1:
+        SimpleMongoDB::insert([
+            'name' => 'leo',
+            'age' => 123,
+            'sex' => 'man',
+            'wanna' => [
+                'a' => 'women',
+                'b' => 'money',
+                'c' => 'power'
+            ]
+        ]);
+        break;
+
+    case 2:
+        SimpleMongoDB::updateWithSet(
+            ['useridx' => 1,],
+//            [
+//                'test' => [
+//                    "A" => 1,
+//                    "B" => 2,
+//                    "C" => 3,
+//                    "D" => 4,
+//                    "E" => 5
+//                ]
+//            ]
+            [
+                '3' => [
+                    'A' => 123123123,
+                    'B' => 123123123,
+                    'C' => 123123123,
+                    'D' => 123123123,
+                    'E' => 123123123,
+                    'F' => 123123123,
+                ]
+            ]
+        );
+        break;
+
+    case 4:
+        var_dump(SimpleMongoDB::select(
+            ['useridx' => 1]
+        ));
+        break;
+
+    case 5:
+        SimpleMongoDB::insertWithID([
+            'name' => 'leo',
+            'age' => 123,
+            'sex' => 'man',
+            'wanna' => [
+                'a' => 'women',
+                'b' => 'money',
+                'c' => 'power'
+            ]
+        ]);
+        break;
+
+    case 6:
+        SimpleMongoDB::delete([
+            'name' => 'leo'
+        ]);
+        break;
+
+    case 3:
+        SimpleMongoDB::updateWithPush(
+            ['name' => 'leo',],
+            [
+                "A" => 1,
+                "B" => 2,
+                "C" => 3,
+                "D" => 4,
+                "E" => 5
+            ]
+        );
+        break;
+
+    case 7:
+        SimpleMongoDB::updateWithAddToSet(
+            ['name' => "leo",],
+            [
+                5 => [
+                    "A" => 1,
+                    "B" => 2,
+                    "C" => 3,
+                    "D" => 4,
+                    "E" => 5
+                ],
+            ]
+        );
+        break;
+
+}

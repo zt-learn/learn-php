@@ -33,7 +33,9 @@ $Days = round(($d2 - $d1) / 3600 / 24);
 echo 'days:' . $Days;
 
 
-//echo $data[2] . '<hr>';
-/**
- *
- */
+echo '<hr>';
+$str = ',2013-01-01,2012-09-01';
+$data = split(',', $str);
+
+echo sizeof($data);
+var_dump($data);
