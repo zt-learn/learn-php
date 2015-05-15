@@ -18,7 +18,3 @@ $superMan = new Superman($superModule);
 //
 //echo 'asdfadf';
 //$superman->shuchu();
-
-
-
-
