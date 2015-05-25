@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: leo
- * Date: 2015/5/14
- * Time: 13:01
+ * “超人” 的创建不再依赖任何一个 “超能力” 的类，我们如若修改了或者增加了新的超能力，
+ * 只需要针对修改 SuperModuleFactory 即可。
+ * 扩充超能力的同时不再需要重新编辑超人的类文件，使得我们变得很轻松
  */
 class Superman
 {
