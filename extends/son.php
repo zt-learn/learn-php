@@ -16,7 +16,14 @@ class Son extends Father
         echo $this->son;
         echo $this->father;
     }
+
+    public static function say()
+    {
+        echo 'sdf';
+//        self::say();
+    }
 }
 
 $son = new Son();
 $son->test2();
+Son::say();

@@ -119,7 +119,7 @@ class SimpleMongoDB
      * @return mixed
      *
      *查询条件是一个数组
-     * ['name' => '田雨青']
+     * ['name' => 'zhentaoo']
      */
     public function select($query)
     {
