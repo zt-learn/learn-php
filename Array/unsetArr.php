@@ -18,6 +18,8 @@ var_dump($arr);
 unset($arr['a']);
 var_dump($arr);
 
+echo $arr[1];
+
 $arr = [
     1, 2, 3
 ];

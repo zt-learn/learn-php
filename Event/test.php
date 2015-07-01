@@ -5,10 +5,13 @@ require_once 'Event.php';
 Event::listen('walk', function () {
     echo "I am walking...\n";
 });
+
 // 增加监听walk一次性事件
 Event::listen('walk', function () {
     echo "I am listening...\n";
 }, true);
+
+
 // 触发walk事件
 Event::trigger('walk');
 /*
