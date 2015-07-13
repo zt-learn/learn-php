@@ -8,18 +8,16 @@ $newheight = floor($height / $p);
 $last = $height % $p;
 // Load
 $source = imagecreatefrompng($filename);
-
 for ($i = 0; $i < $p; $i++) {
     $_p = $newheight * $i;
     if (($i + 1) == $p)
         $newheight += $last;
+    $thumb = ImageCreateTrueColor($newwidth, $newheight);
 
-    $newImg = ImageCreateTrueColor($newwidth, $newheight);
+    $alpha = imagecolorallocatealpha($thumb, 0, 0, 0, 127);
+    imagefill($thumb, 0, 0, $alpha);
 
-    $alpha = imagecolorallocatealpha($newImg, 0, 0, 0, 127);
-    imagefill($newImg, 0, 0, $alpha);
-
-    imagecopyresized($newImg, $source, 0, 0, 0, 0, $newwidth, $height, $width, $height);
-    imagesavealpha($newImg,true);
-    imagepng($newImg, "./t{$i}.png");
+    imagecopyresized($thumb, $source, 0, 0, 0, $_p, $newwidth, $height, $width, $height);
+    imagesavealpha($thumb, true);
+    imagepng($thumb, "./t{$i}.png");
 }

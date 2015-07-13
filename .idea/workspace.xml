@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4d8541b-404e-4fff-84c4-ce15e3f94f81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Img/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Img/fish.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Img/CutImg.php" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t0.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t1.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t2.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t3.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t4.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t5.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t6.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\bitnami\apache2\htdocs\PHPCode\Img\t7.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Img/CutImg.php" afterPath="$PROJECT_DIR$/Img/CutImg.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrimaryPHP.iws" />
@@ -33,15 +39,36 @@
       <file leaf-file-name="CutImg.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Img/CutImg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="527">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="476">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t5.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Img/t5.png">
+      <file leaf-file-name="t0.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Img/t0.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Img/t3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Img/1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fish.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Img/fish.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -114,9 +141,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="1592" />
     <option name="y" value="-8" />
-    <option name="width" value="1554" />
+    <option name="width" value="1616" />
     <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -356,8 +383,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1554" height="916" extended-state="7" />
-    <editor active="true" />
+    <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32951653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27099237" sideWeight="0.6291834" order="12" side_tool="false" content_ui="tabs" />
@@ -370,7 +397,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25859872" sideWeight="0.4228792" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16800536" sideWeight="0.49479166" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2309237" sideWeight="0.49098197" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22172236" sideWeight="0.49098197" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17938931" sideWeight="0.61914325" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21273886" sideWeight="0.49330655" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -427,20 +454,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Factory/Power.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="357">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Factory/Shot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="306">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reflection/reflection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
@@ -727,20 +740,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Img/t2.png">
+    <entry file="file://$PROJECT_DIR$/Img/t3.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Img/CutImg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="527">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="476">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Img/t5.png">
+    <entry file="file://$PROJECT_DIR$/Img/t0.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
