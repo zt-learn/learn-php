@@ -7,6 +7,8 @@
  */
 
 //获取域名或主机地址
+var_dump($_SERVER['REQUEST_URI']);
+
 if ($_SERVER['HTTP_HOST'] == '127.0.0.1') {
     echo 'hehe';
 }

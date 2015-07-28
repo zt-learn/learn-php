@@ -1,14 +1,17 @@
 <?php
-$src_img = "3.jpg";
+$src_img = "t7.png";
 
-dealImg($src_img, 30, 30);
-dealImg($src_img, 50, 50);
+//dealImg($src_img, 30, 30);
+//dealImg($src_img, 50, 50);
 dealImg($src_img, 100, 100);
 
 
 function dealImg($src_img, $dst_w, $dst_h)
 {
     list($src_w, $src_h) = getimagesize($src_img);  // 获取原图尺寸
+
+    echo $src_w;
+    echo $src_h;
 
     $dst_scale = $dst_h / $dst_w; //目标图像长宽比
     $src_scale = $src_h / $src_w; // 原图长宽比

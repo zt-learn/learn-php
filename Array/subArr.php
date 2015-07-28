@@ -7,8 +7,10 @@
  */
 
 $a = [
-    2,
-    3
+    "s" => 2,
+    "b" => 3,
+    "shi" => "sdf",
+    "sv" => 'sdf'
 ];
 
 $b = [
@@ -16,5 +18,9 @@ $b = [
 ];
 
 foreach ($a as $k => $v) {
-    echo $k . $v.'<br>';
+    echo $k . $v . '<br>';
 }
+
+
+$c = array_splice($a, 0, 2);
+var_dump($c);
